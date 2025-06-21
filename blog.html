@@ -1,0 +1,37 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="page-header">
+    <h1 class="page-title">Blog</h1>
+    <p class="page-subtitle">Thoughts on AI, ML, and engineering - simplified for future reference and easy understanding.</p>
+</div>
+
+<div class="posts-list">
+    {% for post in site.posts %}
+    <article class="post-preview">
+        <h2 class="post-preview-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        
+        {% if post.summary %}
+        <p class="post-preview-summary">{{ post.summary }}</p>
+        {% endif %}
+        
+        <div class="post-preview-meta">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            {% if post.author %} • {{ post.author }}{% endif %}
+            {% if post.read_time %} • {{ post.read_time }} min read{% endif %}
+        </div>
+        
+        {% if post.tags %}
+        <div class="post-preview-tags">
+            {% for tag in post.tags %}
+                <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>

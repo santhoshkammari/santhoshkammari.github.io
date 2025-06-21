@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="hero">
+    <h1 class="hero-title">Hi, I'm <span class="highlight">Santhosh Kammari</span></h1>
+    <p class="hero-subtitle">AI/ML Engineer passionate about building intelligent systems and sharing knowledge through simple, meaningful content.</p>
+    
+    <div class="hero-cta">
+        <a href="{{ '/blog' | relative_url }}" class="btn btn-primary">Read My Blog</a>
+        <a href="{{ '/resume' | relative_url }}" class="btn btn-secondary">View Resume</a>
+    </div>
+</div>
+
+<section class="recent-posts">
+    <h2 class="section-title">Recent Posts</h2>
+    <div class="posts-grid">
+        {% for post in site.posts limit: 3 %}
+        <article class="post-card">
+            <h3 class="post-card-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            {% if post.summary %}
+            <p class="post-card-summary">{{ post.summary }}</p>
+            {% endif %}
+            <div class="post-card-meta">
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
+                {% if post.read_time %} • {{ post.read_time }} min read{% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    
+    <div class="section-cta">
+        <a href="{{ '/blog' | relative_url }}" class="btn btn-outline">View All Posts</a>
+    </div>
+</section>
