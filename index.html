@@ -7,31 +7,84 @@ layout: default
     <p class="hero-subtitle">AI/ML Engineer passionate about building intelligent systems and sharing knowledge through simple, meaningful content.</p>
     
     <div class="hero-cta">
-        <a href="{{ '/blog' | relative_url }}" class="btn btn-primary">Read My Blog</a>
-        <a href="{{ '/resume' | relative_url }}" class="btn btn-secondary">View Resume</a>
+        <a href="{{ '/resume' | relative_url }}" class="btn btn-primary">View Resume</a>
+        <a href="mailto:santhoshkammari@gmail.com" class="btn btn-secondary">Contact Me</a>
     </div>
 </div>
 
-<section class="recent-posts">
-    <h2 class="section-title">Recent Posts</h2>
-    <div class="posts-grid">
-        {% for post in site.posts limit: 3 %}
-        <article class="post-card">
-            <h3 class="post-card-title">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </h3>
-            {% if post.summary %}
-            <p class="post-card-summary">{{ post.summary }}</p>
-            {% endif %}
-            <div class="post-card-meta">
-                <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %d, %Y" }}</time>
-                {% if post.read_time %} • {{ post.read_time }} min read{% endif %}
+<section class="about-section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+        <p class="about-text">Machine Learning Engineer at Newgen Software with 2+ years of experience. Passionate about continuous learning and staying up-to-date with the latest advancements by eagerly reading research papers (currently GenAI). Outside the office, you'll find me on the badminton court.</p>
+        
+        <div class="experience-highlights">
+            <div class="experience-item">
+                <h3>Current Role</h3>
+                <p><strong>Machine Learning Engineer</strong> at Newgen Software</p>
+                <p class="duration">Jul 2023 - Present • 2+ years</p>
             </div>
-        </article>
-        {% endfor %}
+            
+            <div class="experience-item">
+                <h3>Education</h3>
+                <p><strong>B.Tech + M.Tech</strong> in Information Technology</p>
+                <p class="institution">ABV-Indian Institute of Information Technology and Management</p>
+                <p class="duration">Aug 2018 - May 2022</p>
+            </div>
+        </div>
     </div>
-    
-    <div class="section-cta">
-        <a href="{{ '/blog' | relative_url }}" class="btn btn-outline">View All Posts</a>
+</section>
+
+<section class="certifications-section">
+    <h2 class="section-title">Certifications & Achievements</h2>
+    <div class="certifications-grid">
+        <div class="cert-card">
+            <div class="cert-header">
+                <div class="cert-icon">🏆</div>
+                <h3>Neural Networks and Deep Learning</h3>
+            </div>
+            <p class="cert-issuer">DeepLearning.AI</p>
+            <p class="cert-date">Issued Mar 2021</p>
+            <a href="https://www.coursera.org/account/accomplishments/records/4J9FDHYZM9QB" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+        
+        <div class="cert-card">
+            <div class="cert-header">
+                <div class="cert-icon">🐍</div>
+                <h3>Python Programming</h3>
+            </div>
+            <p class="cert-issuer">HackerRank</p>
+            <p class="cert-date">Issued Oct 2020</p>
+            <a href="https://www.hackerrank.com/certificates/498cc20c6485" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+        
+        <div class="cert-card">
+            <div class="cert-header">
+                <div class="cert-icon">⚡</div>
+                <h3>C++ Programming</h3>
+            </div>
+            <p class="cert-issuer">HackerRank</p>
+            <p class="cert-date">Issued Sep 2020</p>
+            <a href="https://www.hackerrank.com/certificates/iframe/1ded12e534b5" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+        
+        <div class="cert-card">
+            <div class="cert-header">
+                <div class="cert-icon">🧩</div>
+                <h3>Problem Solving</h3>
+            </div>
+            <p class="cert-issuer">HackerRank</p>
+            <p class="cert-date">Issued Jul 2022</p>
+            <a href="https://www.hackerrank.com/certificates/iframe/d1710134a5d8" target="_blank" class="cert-link">View Certificate</a>
+        </div>
+        
+        <div class="cert-card">
+            <div class="cert-header">
+                <div class="cert-icon">📊</div>
+                <h3>Conference Paper</h3>
+            </div>
+            <p class="cert-issuer">IEEE Bombay Section</p>
+            <p class="cert-date">ICONAT 2022</p>
+            <a href="https://drive.google.com/file/d/18B_NUzTJFSA99JXEBr-eEihufzRZurCn/view?usp=sharing" target="_blank" class="cert-link">View Paper</a>
+        </div>
     </div>
 </section>
